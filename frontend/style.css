@@ -1,0 +1,17 @@
+ h4{
+        color:rgb(28, 25, 20);
+        background-color: aquamarine;
+        font-size: 10px;
+        font-weight:bolder ;
+        font-style: oblique;
+        text-decoration: underline;
+        text-align: center;
+        text-decoration-color: blue;
+        text-underline-offset: 10px;
+        border:violet 2px dashed;
+        cursor:pointer;
+    }
+    p{
+        color:black;
+        background-color: blue;
+    }
