@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing System</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .container {
+            background-color: white;
+            width: 350px;
+            margin: 50px auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Billing System</h2>
+
+    <input type="text" id="product"
+           placeholder="Product Name">
+
+    <input type="number" id="qty"
+           placeholder="Quantity">
+
+    <input type="number" id="price"
+           placeholder="Price">
+
+    <br>
+
+    <button onclick="calculateBill()">
+        Generate Bill
+    </button>
+
+    <h3 id="result"></h3>
+
+</div>
+
+<script>
+
+    function calculateBill() {
+
+        let product =
+        document.getElementById("product").value;
+
+        let qty =
+        Number(document.getElementById("qty").value);
+
+        let price =
+        Number(document.getElementById("price").value);
+
+        let total = qty * price;
+
+        document.getElementById("result").innerHTML =
+        "Product: " + product + "<br>" +
+        "Quantity: " + qty + "<br>" +
+        "Price: ₹" + price + "<br>" +
+        "Total Bill: ₹" + total;
+    }
+
+</script>
+
+</body>
+</html>
